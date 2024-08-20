@@ -34,10 +34,10 @@ export const DataProvider = ({ children }) => {
           const storedPosts = JSON.parse(localStorage.getItem('social-media-post'));
           if (storedPosts) {
             setPosts(storedPosts); 
-            setLoading(false);
           }
+          setLoading(false);
         }
-        const timeoutId = setTimeout(loadPosts, 2000);
+        const timeoutId = setTimeout(loadPosts, 1000);
 
         return () => {
           clearTimeout(timeoutId);
