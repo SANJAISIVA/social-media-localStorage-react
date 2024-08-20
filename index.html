@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader {
+            border: 2px solid black;
+            height: 500px;
+            width: 200px;
+            position: relative;
+        }
+
+        .outer-circle, .inner-circle {
+            position: absolute;
+            border: 5px solid  transparent;
+            border-radius: 50%;
+        }
+
+        .outer-circle {
+            width: 100px;
+            height: 100px;
+            border-top: 5px solid blue;
+            animation: rotate-clockwise 2s linear infinite;
+        }
+
+        .inner-circle {
+            width: 60px;
+            height: 60px;
+            top: 20px;
+            left: 20px;
+            border-top: 5px solid red;
+            animation: rotate-counterclockwise 2s linear infinite;
+        }
+
+        @keyframes rotate-clockwise {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotate-counterclockwise {
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="outer-circle"></div>
+        <div class="inner-circle"></div>        
+    </div>
+</body>
+</html>
