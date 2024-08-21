@@ -72,7 +72,7 @@ export const DataProvider = ({ children }) => {
         localStorage.setItem("social-media-post", JSON.stringify(allPosts))
         setPostTitle('');
         setPostBody('');
-        navigate('/'); // after insertion go back to home
+        navigate('/social-media-localStorage-react/'); // after insertion go back to home
        
       }
       
@@ -82,7 +82,7 @@ export const DataProvider = ({ children }) => {
           setPosts(postList);
           localStorage.setItem("social-media-post", JSON.stringify(postList))
           console.log("deleted");   
-          navigate('/');
+          navigate('/social-media-localStorage-react/');
       }
     
       // Edit post
@@ -101,7 +101,7 @@ export const DataProvider = ({ children }) => {
 
         setEditTitle('')
         setEditBody('')
-        navigate('/');
+        navigate('/social-media-localStorage-react/');
          
         setPosts(...posts, updatedPost);
         console.log(updatedPost);
