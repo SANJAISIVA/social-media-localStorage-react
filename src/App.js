@@ -22,7 +22,7 @@ function App() {
       <Nav />
 
       <Routes>
-        <Route path='/' element={ <Home /> } />
+        <Route path='/social-media-localStorage-react' element={ <Home /> } />
         <Route path='post'>
           <Route index element={ <NewPost /> } />
 

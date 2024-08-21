@@ -19,7 +19,7 @@ const Home = (  ) => {
         {!loading && 
             ( searchResults.length ? 
                 <Feed posts={searchResults} /> : 
-                <p className="statusMsg">No posts to display.</p>
+                <p className="statusMsg">No posts to display, add new posts...</p>
             )
         }
     </main>
